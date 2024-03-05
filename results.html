@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regex Results</title>
+</head>
+<body>
+    <h1>Matched Strings for "{{ regex_pattern }}"</h1>
+    <h2>Test String: "{{ test_string }}"</h2>
+    {% if matches %}
+        <ul>
+            {% for match in matches %}
+                <li>{{ match }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No matches found or invalid regex pattern.</p>
+    {% endif %}
+    <a href="/">Test another</a>
+</body>
+</html>
+
